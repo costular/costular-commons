@@ -1,6 +1,22 @@
+apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
+
+publish {
+
+    def groupProjectID = 'com.costular'
+    def artifactProjectID = 'commons'
+    def publishVersionID = '0.1'
+
+    userOrg = 'costular'
+    repoName = 'Commons'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Costular commons core library'
+    website = 'https://github.com/costular/costular-commons'
+}
 
 android {
     compileSdkVersion 28
@@ -11,7 +27,7 @@ android {
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
